@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Angular Module Call -->
+<html lang="es" ng-app="pokemon">
+<head>
+	<!-- JQuery Framework -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<!-- Title of the WebSite -->
+	<title>Pokemon-/-</title>
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	 <!-- Google Font Framework -->
+	<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">	
+	<!-- Style File Section -->
+	<link rel="stylesheet"  href="css/style.css">
+	<!-- Pokeball Icon -->
+	<link rel="icon" href="imag/ps.jpg">
+</head>
+
+
+<body ng-controller="listadopokemon">
+	<div class="container-fluid nav">
+		 <!-- Header Bar -->
+		<div class="row altoTotal">
+
+			<!--img gif -->
+			<div class="col-md-12 vCenter altoTotal "><span class="titulo">pokedex</span></div><img class="circulo"src ="imag/gifs.gif">
+
+		</div>
+	</div>
+	<br>
+
+	<div class="container-fluid">
+		<div class="row hg">
+			<div class="col-md-3 pad" ng-repeat="p in listado">
+				<div class="pokeInfo">
+					<div>
+						<!-- Pokemon Picture -->
+              <!-- <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke"> -->
+						<img  class="img-responsive imgPoke"src="{{p.data.sprites.front_default}}" alt="poke">
+					</div>
+					<!-- <div class="pokeName">{{x.data.name}}</div> -->
+					<div class="nompoke text-center">
+					{{p.data.name}}
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- AngularJS v1 Framework -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<!-- Function's File -->
+	<script src="js/script.js"></script>
+	
+
+</body>
+</html>
